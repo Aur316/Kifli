@@ -17,6 +17,7 @@ const ButtonWithBackGround: React.FC<ButtonWithBackgroundProps> = ({
 
   return (
     <div
+      style={{ maxWidth: "120px" }}
       className={disabled ? "disabled" : "buttonWithIcon-container"}
       onMouseDown={handleMouseDown}
       onClick={disabled ? undefined : onClick}

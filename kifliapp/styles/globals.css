@@ -13,6 +13,7 @@
   color: white;
   font-weight: bold;
   font-family: sans-serif;
+  z-index: 99;
 }
 
 .buttonWithIcon-icon {
@@ -105,6 +106,8 @@
   cursor: text;
   font-family: sans-serif;
   width: 60%;
+
+  z-index: 99;
 }
 
 .input-container:hover {
@@ -137,8 +140,9 @@
 }
 
 .headlineImg {
-  width: 70%;
+  width: 90%;
   margin: 0 auto;
+  border-radius: 8px;
 }
 
 .headline {
@@ -155,19 +159,18 @@
 .action-container {
   position: relative;
   margin: 0 auto;
-  width: 70%;
-  height: 350px;
+  width: 90%;
+  height: auto;
   border-radius: 8px;
-  overflow: hidden; /* A keretív miatt szükséges lehet */
+  overflow: hidden;
 }
 
 .background-image {
   float: right;
   width: 70%;
   height: 100%;
-  opacity: 0.5; /* Ha az átlátszóságot szeretnéd beállítani */
+  opacity: 0.9;
   mask-image: linear-gradient(to right, transparent, black);
-  filter: blur(1px); /* Ha el szeretnéd homályosítani a képet */
 }
 
 .content {
@@ -193,3 +196,70 @@
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 /* ACTION */
+
+@media (max-width: 768px) {
+  .headline-buttonGroup {
+    flex-direction: column;
+    align-items: center;
+  }
+  .inputButton {
+    flex-direction: column;
+    align-items: left;
+    gap: 5px;
+  }
+  .action-container {
+    width: 90%;
+    height: auto;
+  }
+  .background-image {
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    filter: none;
+    mask-image: none;
+  }
+  .action-container::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, black 0%, transparent 80%);
+    pointer-events: none;
+  }
+  .content {
+    color: white;
+    z-index: 99;
+    font-size: 12px;
+  }
+  .input-container {
+    height: 5%;
+  }
+  .buttonWithIcon-container {
+    display: inline-flex;
+    border-radius: 6px;
+    overflow: hidden;
+  }
+}
+
+@media (max-width: 1400px) {
+  .headlineDescripton {
+    width: 80%;
+  }
+}
+
+@media (max-width: 480px) {
+  .action-container {
+    height: 300px;
+    width: auto;
+    max-width: 90%;
+  }
+  .background-image {
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    filter: none;
+    mask-image: none;
+  }
+}
