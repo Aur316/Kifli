@@ -2,7 +2,8 @@ import React, { useState, useEffect } from "react";
 import ButtonWithBackGround from "../buttons/buttonWithBackGround/ButtonWithBackGround";
 import localeData from "../../locales/descriptions.json";
 import Input from "../input/Input";
-import { message } from "antd";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 interface ActionProps {
   title: string;
@@ -39,14 +40,15 @@ const Action: React.FC<ActionProps> = ({ title, description, placeholder }) => {
       }
 
       setEmail("");
-      message.success(localeData.successMessage);
+      toast.success(localeData.successMessage);
     } catch (error: any) {
-      message.error(`Failed to submit data: ${error.message}`);
+      toast.error(`Failed to submit data: ${error.message}`);
     }
   };
 
   return (
     <div className="action-container">
+      <ToastContainer />
       <img
         src="/action/action.png"
         alt="Háttérkép"
