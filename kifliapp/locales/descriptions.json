@@ -7,5 +7,7 @@
   "actionTitle": "Maradj naprakész!",
   "actionDescription": "Iratkozz fel hírlevelünkre, hogy elsőként értesülj új szolgáltatásainkról, híreinkről és prkaktikus logisztikai tippekről!",
   "actionPlaceholder": "emailcimed@domain.hu",
-  "actionButton": "Feliratkozok"
+  "actionButton": "Feliratkozok",
+  "successMessage": "Sikeresen feliratkoztál hírlevelünkre!",
+  "errorMessage": "Kérlek érvényes email címet adj meg!"
 }

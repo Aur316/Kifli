@@ -15,7 +15,7 @@ const HeadLine: React.FC<HeadLineProps> = ({ title, description, img }) => {
   return (
     <div className="headline-container">
       <h1 className="headline">{title} </h1>
-      <p className="descripton">{description}</p>
+      <p className="headlineDescripton">{description}</p>
       <br />
       <br />
       <div className="headline-buttonGroup">

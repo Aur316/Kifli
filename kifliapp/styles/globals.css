@@ -54,6 +54,25 @@
 .buttonWithIcon-icon:focus {
   outline: none;
 }
+.disabled {
+  border: 1px solid #d2d3e1;
+  color: #d2d3e1;
+  cursor: not-allowed;
+  background-color: #f2f2f2;
+}
+
+.disabled .buttonWithIcon-main {
+  background-color: #f2f2f2;
+  color: #d2d3e1;
+  cursor: not-allowed;
+}
+
+.disabled .buttonWithIcon-icon {
+  background-color: #f2f2f2;
+  color: #d2d3e1;
+  cursor: not-allowed;
+}
+
 /* Button witch icon */
 
 /* Simple button */
@@ -85,6 +104,7 @@
   border: 1px solid #d2d3e1;
   cursor: text;
   font-family: sans-serif;
+  width: 60%;
 }
 
 .input-container:hover {
@@ -117,15 +137,15 @@
 }
 
 .headlineImg {
-  width: 80%;
+  width: 70%;
   margin: 0 auto;
 }
 
 .headline {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
-.descripton {
-  width: 70%;
+.headlineDescripton {
+  width: 30%;
   margin: 0 auto;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
@@ -133,15 +153,43 @@
 /* HeadLine */
 /* ACTION */
 .action-container {
-  background-image: url("/action/action.png");
-  background-repeat: no-repeat;
-  background-size: 100% 100%; /* Teljes méretre állítja a képet, ami torzíthatja a képarányokat */
-  background-position: center center; /* Középre helyezi a képet */
+  position: relative;
   margin: 0 auto;
-  width: 850px;
+  width: 70%;
   height: 350px;
   border-radius: 8px;
-  padding: 16px;
+  overflow: hidden; /* A keretív miatt szükséges lehet */
 }
 
+.background-image {
+  float: right;
+  width: 70%;
+  height: 100%;
+  opacity: 0.5; /* Ha az átlátszóságot szeretnéd beállítani */
+  mask-image: linear-gradient(to right, transparent, black);
+  filter: blur(1px); /* Ha el szeretnéd homályosítani a képet */
+}
+
+.content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+.inputButton {
+  display: flex;
+  flex-direction: row;
+  width: 90%;
+  gap: 20px;
+}
+.actionDescription {
+  width: 60%;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
 /* ACTION */
