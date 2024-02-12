@@ -8,7 +8,7 @@ First, install dependencies:
 npm i
 ```
 
-Second, run the development server with mock server:
+Second, run the development server with mock server (this server saves API data to JSON files):
 
 ```bash
 npm run dev:all
