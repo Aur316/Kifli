@@ -25,7 +25,7 @@ const Action: React.FC<ActionProps> = ({ title, description, placeholder }) => {
 
   const newsletter = async () => {
     try {
-      const response = await fetch("http://localhost:3000/api/emails", {
+      const response = await fetch("/api/emails", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

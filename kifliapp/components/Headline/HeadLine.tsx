@@ -2,9 +2,10 @@ import React from "react";
 import ButtonWithIcon from "../buttons/buttonWithIcon/ButtonWithIcon";
 import SimpleButton from "../buttons/simpleButton/SimpleButton";
 import localeData from "../../locales/descriptions.json";
+import { FaArrowRight } from "react-icons/fa";
+
 interface HeadLineProps {
   title: string;
-
   description: string;
   img: string;
 }
@@ -22,7 +23,7 @@ const HeadLine: React.FC<HeadLineProps> = ({ title, description, img }) => {
         <ButtonWithIcon
           text={localeData.headLineBtn1}
           onClick={handleIconClick}
-          icon={"+"}
+          icon={<FaArrowRight />}
         />
         <SimpleButton
           text={localeData.headlineBtn2}

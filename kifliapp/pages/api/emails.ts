@@ -16,12 +16,12 @@ export default async function handler(
       data.subscibers.push({ email });
       fs.writeFileSync(filePath, JSON.stringify(data));
 
-      res.status(200).json({ message: "Email sikeresen hozzáadva" });
+      res.status(200).json({ message: "Email added successfully!" });
     } else {
       res.setHeader("Allow", ["POST"]);
       res.status(405).end(`Method ${req.method} Not Allowed`);
     }
   } catch (error: any) {
-    res.status(500).json({ message: "Szerver hiba: " + error.message });
+    res.status(500).json({ message: "Server Error: " + error.message });
   }
 }

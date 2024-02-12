@@ -8,9 +8,9 @@ const Home: NextPage = () => {
   return (
     <div>
       <Head>
-        <title>Kifli</title>
+        <title>Főoldal - Kifli.Tech</title>
         <meta name="Kifli" content="Email subscriber" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/logo.jpeg" />
       </Head>
       <HeadLine
         title={localeData.headlineTitle}
