@@ -252,7 +252,7 @@
 
 @media (max-width: 480px) {
   .action-container {
-    height: 300px;
+    height: 250px;
     width: auto;
     max-width: 90%;
   }
